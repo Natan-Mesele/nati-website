@@ -18,7 +18,7 @@ function Footer() {
         </NavFooter>
         <SocialFooter>
             <h1>Social Media</h1>
-            <a href="https://www.facebook.com/natan.mesele.1/"><img src="img/face.png"/></a>
+            <a target="_blank" href="https://www.facebook.com/natan.mesele.1/"><img src="img/face.png"/></a>
             <img src="img/git.png"/>
             <img src="img/inst.png"/>
             <img src="img/linkedin.png"/>
@@ -36,9 +36,13 @@ const Container = styled.div`
     height: 70vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    padding: 1.5em;
+    padding: 3em;
     text-align: left;
     color: white;
+
+    @media (min-width: 920px){
+        height: 50vh;
+    }
 
     h1 {
         font-size: 1.2em;
@@ -50,6 +54,10 @@ const Container = styled.div`
         font-size: .9em;
         margin-top: 1em;
     }
+
+    @media (min-width: 768px){
+        padding: 3em 6em;    
+    }
 `
 const MainFooter = styled.div`
     
@@ -57,7 +65,11 @@ const MainFooter = styled.div`
 const NavFooter = styled.div`
     display: flex;
     flex-direction: column;
-    
+
+    @media (min-width: 818px){
+        margin-left: 6em;
+    }
+
     a {
         margin: .5em 0;
         color: gray;
@@ -67,7 +79,6 @@ const NavFooter = styled.div`
 `
 const SocialFooter = styled.div`
     color: white;
-    
 
     img {
         width: 30px;

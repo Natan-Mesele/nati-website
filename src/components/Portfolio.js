@@ -22,7 +22,7 @@ function Portfolio() {
                         <img src="img/disney.jpg"/>
                     </Wrap>
                     <Wrap>
-                        <img src="img/linkedin.jpg"/>
+                        <img src="img/linkp.jpg"/>
                     </Wrap>
         </Containers>
         
