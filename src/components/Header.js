@@ -71,7 +71,7 @@ const Container = styled.div`
 const Menu = styled.div`
     display: flex;
     flex: 1;
-    justify-content: right;
+    justify-content: center;
 
     a {
         padding: 0 20px;
@@ -96,6 +96,10 @@ const BurgerNav = styled.div`
     transform: ${props => props.show ? 'translateX(0%)':'translateX(100%)'};
     transition: transform .5s;
 
+    @media (min-width: 920px){
+        width: 25%;
+    }
+
     li a {
         color: white;
         display: block;
@@ -109,5 +113,4 @@ const CustomClose = styled(CloseIcon)`
 const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
-    
 `
