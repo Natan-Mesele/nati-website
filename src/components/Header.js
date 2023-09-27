@@ -88,7 +88,7 @@ const BurgerNav = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    background: #20272E;
+    background: white;
     width: 50%;
     height: 100vh;
     padding-top: 1em; 
@@ -101,14 +101,14 @@ const BurgerNav = styled.div`
     }
 
     li a {
-        color: white;
+        color: black;
         display: block;
         padding: 1em 1.5em;
     }
 `
 const CustomClose = styled(CloseIcon)`
     cursor: pointer;
-    color: white;
+    color: black;
 `
 const CloseWrapper = styled.div`
     display: flex;

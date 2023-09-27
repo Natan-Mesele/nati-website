@@ -4,31 +4,36 @@ import styled from 'styled-components'
 function Portfolio() {
   return (
     <Container>
-        <Wrap>
-            <img src="img/tesla.jpg"/>
-        </Wrap>
-        <Wrap>
-            <img src="img/apple.png"/>
-        </Wrap>
-        <Wrap>
-            <img src="img/amazon.jpg"/>
-        </Wrap>
-        <Wrap>
-            <img src="img/netflix.jpg"/>
-        </Wrap>
-        <Wrap>
-            <img src="img/disney.jpg"/>
-        </Wrap>
-        <Wrap>
-            <img src="img/disney.jpg"/>
-        </Wrap>
+        <h1>Recent Works</h1>
+        <Containers>
+            <Wrap>
+                        <img src="img/tesla.jpg"/>
+                    </Wrap>
+                    <Wrap>
+                        <img src="img/apple.png"/>
+                    </Wrap>
+                    <Wrap>
+                        <img src="img/amazon.jpg"/>
+                    </Wrap>
+                    <Wrap>
+                        <img src="img/netflix.jpg"/>
+                    </Wrap>
+                    <Wrap>
+                        <img src="img/disney.jpg"/>
+                    </Wrap>
+                    <Wrap>
+                        <img src="img/linkedin.jpg"/>
+                    </Wrap>
+        </Containers>
+        
+       
     </Container>
   )
 }
 
 export default Portfolio
 
-const Container = styled.div`
+const Containers = styled.div`
     margin-top: 4em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
@@ -42,6 +47,9 @@ const Container = styled.div`
         display: grid;
         grid-template-columns: repeat(3, minmax(19rem, 1fr));
     }  
+`
+const Container = styled.div`
+    
 `
 const Wrap = styled.div`
     margin: 2em;

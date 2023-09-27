@@ -16,11 +16,11 @@ function Home() {
 export default Home
 
 const Wrap = styled.div`
-    background: url("img/back2.jpg");
+    background: url("img/hacker.jpg");
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     opacity: .8;
 
     @media (min-width: 768px) {
