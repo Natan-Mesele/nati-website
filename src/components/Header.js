@@ -2,9 +2,14 @@ import React, { useState } from 'react'
 import styled from "styled-components"
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
+import { Link } from "react-scroll"
+import { animateScroll as scroll } from 'react-scroll';
 
 function Header() {
     const [burgerStatus, setBurgerStatus] = useState(false);
+    const closeMenu = () => {
+        scroll.scrollToTop();
+    };
 
   return (
     <Container>
@@ -12,8 +17,8 @@ function Header() {
             <a href="#">Natty<span>Brand</span></a>
         </a>
         <Menu>
-            <a href="#">Home</a>
-            <a href="#">About</a>
+            <a href="#"><Link activeClass="active" to="Home" spy={true} smooth={true} duration={500} onclick={closeMenu}>Home</Link> </a>
+            <a href="#"><Link activeClass="active" to="About" spy={true} smooth={true} duration={500} onclick={closeMenu}>About</Link> </a>
             <a href="#">Service</a>
             <a href="#">Portfolio</a>
             <a href="#">Contact</a>

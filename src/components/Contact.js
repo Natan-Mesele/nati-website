@@ -1,20 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
 
 function Contact() {
   return (
     <Container>
-        <h2>Contact</h2>
-        <label for="name">Name</label>
-        <input type="name" id="name"/>
+        <Fade bottom>
+            <h2>Contact</h2>
+            <label for="name">Name</label>
+            <input type="name" id="name"/>
 
-        <label for="email">Email</label>
-        <input type="email" id="email"/>
+            <label for="email">Email</label>
+            <input type="email" id="email"/>
 
-        <label for="message">Message</label>
-        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
 
-        <input type="submit" value="Send Message"></input>
+            <input type="submit" value="Send Message"></input>
+        </Fade>
     </Container>
   )
 }

@@ -1,20 +1,25 @@
 import React from 'react'
 import styled from "styled-components"
+import Fade from 'react-reveal/Fade';
 
 function About() {
   return (
     <Container>
         <ImgHero img src="img/na.png"/>
         <Hero>
-              <h1>About</h1>
-              <h2>FULL-STACK DEVELOPER & SOFTWARE DEVELOPER.</h2>
-              <p>Hello! I'm <span>Natan Mesele</span>, a Full-Stack web developer. I have a big interest in computer science.
-                  My dream is to be a computer scientist and a university professor (on computer science). I have attended full-stack development courses at Udemy and Evangadi Bootcamps. To further strengthen my future web development studies, I joined Coursera Inc. which is a U.S.-based massive open online course provider. I am a hardworking, honest, and willing to learn new skills.</p>
-              <p>I'm happy to connect, listen and help. Let's work together and build something awesome. Let's turn your idea to an even greater product.</p>
-              <CV>
-                <a target="_blank" href="cv.pdf" class="primary-about">View Resume</a>
-                <a target="_blank" href="cv.pdf" class="primary-about">View certificates</a>
-              </CV>
+          <Fade bottom>
+            <h1>About</h1>
+            <h2>FULL-STACK DEVELOPER & SOFTWARE DEVELOPER.</h2>
+            <p>Hello! I'm <span>Natan Mesele</span>, a Full-Stack web developer. I have a big interest in computer science.
+                My dream is to be a computer scientist and a university professor (on computer science). I have attended full-stack development courses at Udemy and Evangadi Bootcamps. To further strengthen my future web development studies, I joined Coursera Inc. which is a U.S.-based massive open online course provider. I am a hardworking, honest, and willing to learn new skills.</p>
+            <p>I'm happy to connect, listen and help. Let's work together and build something awesome. Let's turn your idea to an even greater product.</p>
+          </Fade>
+          <Fade bottom>
+            <CV>
+              <a target="_blank" href="cv.pdf" class="primary-about">View Resume</a>
+              <a target="_blank" href="cv.pdf" class="primary-about">View certificates</a>
+            </CV>
+          </Fade>
         </Hero>
     </Container>
   )

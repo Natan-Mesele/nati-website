@@ -1,32 +1,35 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
 
 function Portfolio() {
   return (
     <Container>
-        <h1>Recent Works</h1>
-        <Containers>
-            <Wrap>
-                        <img src="img/tesla.jpg"/>
-                    </Wrap>
-                    <Wrap>
-                        <img src="img/apple.png"/>
-                    </Wrap>
-                    <Wrap>
-                        <img src="img/amazon.jpg"/>
-                    </Wrap>
-                    <Wrap>
-                        <img src="img/netflix.jpg"/>
-                    </Wrap>
-                    <Wrap>
-                        <img src="img/disney.jpg"/>
-                    </Wrap>
-                    <Wrap>
-                        <img src="img/linkp.jpg"/>
-                    </Wrap>
-        </Containers>
-        
-       
+        <Fade bottom>
+            <h1>Recent Works</h1>
+        </Fade>
+            <Containers>
+                <Fade bottom>
+                <Wrap>
+                <img src="img/tesla.jpg"/>
+                </Wrap>
+                <Wrap>
+                    <img src="img/apple.png"/>
+                </Wrap>
+                <Wrap>
+                    <img src="img/amazon.jpg"/>
+                </Wrap>
+                <Wrap>
+                    <img src="img/netflix.jpg"/>
+                </Wrap>
+                <Wrap>
+                    <img src="img/disney.jpg"/>
+                </Wrap>
+                <Wrap>
+                    <img src="img/linkp.jpg"/>
+                </Wrap>
+                </Fade>
+            </Containers>
     </Container>
   )
 }

@@ -1,28 +1,35 @@
 import React from 'react'
 import styled from "styled-components"
+import Fade from 'react-reveal/Fade';
 
 function Footer() {
   return (
     <Container>
         <MainFooter>
+            <Fade bottom>
             <h1>Address</h1>
             <p>Addis Ketema Subcity, Hawassa Ethiopia</p>
             <p>huluale12@gmail.com / nattymesele@gmail.com</p>
             <p>+251926412563</p>
+            </Fade>
         </MainFooter>
         <NavFooter>
-            <h1>Navigation</h1>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <Fade bottom>
+                <h1>Navigation</h1>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </Fade> 
         </NavFooter>
         <SocialFooter>
-            <h1>Social Media</h1>
-            <a target="_blank" href="https://www.facebook.com/natan.mesele.1/"><img src="img/face.png"/></a>
-            <img src="img/git.png"/>
-            <img src="img/inst.png"/>
-            <img src="img/linkedin.png"/>
-            <img src="img/twitter1.png"/>
+            <Fade bottom>
+                <h1>Social Media</h1>
+                <a target="_blank" href="https://www.facebook.com/natan.mesele.1/"><img src="img/face.png"/></a>
+                <img src="img/git.png"/>
+                <img src="img/inst.png"/>
+                <img src="img/linkedin.png"/>
+                <img src="img/twitter1.png"/>
+            </Fade>
         </SocialFooter>
     </Container>
   )

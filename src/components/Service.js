@@ -1,11 +1,15 @@
 import React from 'react'
 import styled from "styled-components"
+import Fade from 'react-reveal/Fade';
 
 function Service() {
   return (
     <Container>
-        <h1>Why Choose My Services</h1>
-        <p>I'm a great team player, and I enjoy working with others. some of my work qualities are listed below.</p>
+        <Fade bottom>
+            <h1>Why Choose My Services</h1>
+            <p>I'm a great team player, and I enjoy working with others. some of my work qualities are listed below.</p>
+        </Fade>
+        <Fade bottom>
         <Wrap>
             <Feature>
                 <img src="img/aperture.svg" alt="aperture"></img>
@@ -68,8 +72,8 @@ function Service() {
                 <p>I do some research before starting my development to choose the right way for the job.</p>
             </Feature>
         </Wrap> 
+        </Fade>
     </Container>
-    
   )
 }
 

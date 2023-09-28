@@ -1,17 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
 
 function Skill() {
   return (
     <Container>
         <Text>
+        <Fade bottom>
             <h2>Development Skills</h2>
             <p>I develop my skill on online courses at Evangadi & Udemy.</p>
+        </Fade> 
+        <Fade bottom>  
             <Content>
                 <p>HTML/CSS/BOOTSTRAP</p>
                 <p>JAVASCRIPT/DOM/JQUERY</p>
                 <p>REACT JS/NODE JS/EXPRESS JS/MY SQL</p>
             </Content>
+        </Fade>     
         </Text>
     </Container>
   )
