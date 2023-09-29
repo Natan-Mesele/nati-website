@@ -50,7 +50,7 @@ const Wrap = styled.div`
     }
 `
 const ItemText = styled.div`
-    padding-top: 20vh;
+    padding-top: 25vh;
     text-align: center;
     color: white;
 
@@ -62,7 +62,7 @@ const ItemText = styled.div`
 
     h1 {
         font-size: 2.5rem;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
 
         span {
             color: #278EFF;

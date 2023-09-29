@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from "styled-components"
 import Fade from 'react-reveal/Fade';
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ScrollToTop from "react-scroll-to-top";
 
 function Footer() {
   return (
@@ -31,6 +33,9 @@ function Footer() {
                 <img src="img/twitter1.png"/>
             </Fade>
         </SocialFooter>
+        <Scroll>
+            <ScrollToTop smooth top="20"/>
+        </Scroll> 
     </Container>
   )
 }
@@ -96,5 +101,11 @@ const SocialFooter = styled.div`
         display: inline-block;
         margin-right: 1em;
         border: .5px solid gray;
+    }
+`
+const Scroll = styled(ScrollToTop)`
+    &:hover {
+        background: white;
+        border: 2px solid gray;
     }
 `

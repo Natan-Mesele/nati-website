@@ -17,8 +17,8 @@ function Header() {
             <a href="#">Natty<span>Brand</span></a>
         </a>
         <Menu>
-            <a href="#"><Link activeClass="active" to="Home" spy={true} smooth={true} duration={500} onclick={closeMenu}>Home</Link> </a>
-            <a href="#"><Link activeClass="active" to="About" spy={true} smooth={true} duration={500} onclick={closeMenu}>About</Link> </a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
             <a href="#">Service</a>
             <a href="#">Portfolio</a>
             <a href="#">Contact</a>
