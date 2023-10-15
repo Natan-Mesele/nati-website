@@ -11,22 +11,22 @@ function Portfolio() {
             <Containers>
                 <Fade bottom>
                 <Wrap>
-                <img src="img/tesla.jpg"/>
+                <a target="_blank" href="https://github.com/Natan-Mesele/Tesla-clone"><img src="img/tesla.jpg"/></a>
                 </Wrap>
                 <Wrap>
-                    <img src="img/apple.png"/>
+                    <a target="_blank" href="https://github.com/Natan-Mesele/apple-clone"><img src="img/apple.png"/></a>
                 </Wrap>
                 <Wrap>
-                    <img src="img/amazon.jpg"/>
+                    <a target="_blank" href="https://github.com/Natan-Mesele/amazon-clone"><img src="img/amazon.jpg"/></a>
                 </Wrap>
                 <Wrap>
-                    <img src="img/netflix.jpg"/>
+                   <a target="_blank" href="https://github.com/Natan-Mesele/netflix-clone"><img src="img/netflix.jpg"/></a> 
                 </Wrap>
                 <Wrap>
-                    <img src="img/disney.jpg"/>
+                   <a target="_blank" href="https://github.com/Natan-Mesele/disney-clone"><img src="img/disney.jpg"/></a> 
                 </Wrap>
                 <Wrap>
-                    <img src="img/linkp.jpg"/>
+                    <a target="_blank" href="https://github.com/Natan-Mesele/linkedin-clone"><img src="img/linkp.jpg"/></a>
                 </Wrap>
                 </Fade>
             </Containers>
