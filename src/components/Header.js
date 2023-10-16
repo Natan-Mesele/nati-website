@@ -4,6 +4,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import { Link } from "react-scroll"
 import { animateScroll as scroll } from 'react-scroll';
+import PhoneIcon from '@material-ui/icons/Phone';
+import EmailIcon from '@material-ui/icons/Email';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+
 
 function Header() {
     const [burgerStatus, setBurgerStatus] = useState(false);
@@ -28,11 +32,20 @@ function Header() {
             <CloseWrapper>
                 <CustomClose onClick={(()=>setBurgerStatus(false))}/>
             </CloseWrapper>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <img src="img/n.jpg"/>
+            <p>I am a 28 years old Full-stack web developer.</p>
+            <PhoneNum>
+                <Phone/>
+                +251 926 412 563
+            </PhoneNum>
+            <Email>
+                <Em/>
+                nattymesele@gmail.com
+            </Email>
+            <Location>
+                <Loc/>
+                Hawassa , Ethiopia
+            </Location>
         </BurgerNav>
     </Container>
   )
@@ -97,9 +110,24 @@ const BurgerNav = styled.div`
     width: 50%;
     height: 100vh;
     padding-top: 1em; 
-    text-align: right;
+    text-align: center;
     transform: ${props => props.show ? 'translateX(0%)':'translateX(100%)'};
     transition: transform .5s;
+
+    img {
+        width: 15em;
+        height: 20em;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    p {
+        margin-top: 2em;
+        padding: 0 2em;
+        text-align: left;
+        line-height: 1.5em;
+        color: gray;
+    }
 
     @media (min-width: 920px){
         width: 25%;
@@ -118,4 +146,31 @@ const CustomClose = styled(CloseIcon)`
 const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
+`
+const PhoneNum = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em 2em;
+    color: gray;
+`
+const Phone = styled(PhoneIcon)`
+`
+const Email = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em 2em;
+    color: gray;
+`
+const Em = styled(EmailIcon)`
+`
+const Location = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1em 2em;
+    color: gray;
+`
+const Loc = styled(LocationOnIcon)`
 `

@@ -52,7 +52,7 @@ const Containers = styled.div`
     }  
 `
 const Container = styled.div`
-    
+    margin-top: 2em;
 `
 const Wrap = styled.div`
     margin: 2em;
