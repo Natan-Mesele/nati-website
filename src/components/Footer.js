@@ -45,7 +45,7 @@ export default Footer
 const Container = styled.div`
     background: #051129;
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
     padding: 3em;

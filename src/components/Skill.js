@@ -29,7 +29,7 @@ const Container = styled.div`
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     color: white;
     padding: 1.5em;
     @media (min-width: 768px){

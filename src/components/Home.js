@@ -9,7 +9,7 @@ function Home() {
         loop: {},
       })
   return (
-    <Wrap>
+    <Container>
         <ItemText>
             <Fade bottom>
                 <p>WELCOME TO MY WORLD</p>
@@ -23,13 +23,13 @@ function Home() {
                 <a href="#">Go To Portfolio</a>
             </Fade>
         </ItemText>
-    </Wrap>
+    </Container>
   )
 }
 
 export default Home
 
-const Wrap = styled.div`
+const Container = styled.div`
     background: url("img/hacker.jpg");
     background-size: cover;
     background-position: center;
