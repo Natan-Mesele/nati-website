@@ -27,25 +27,18 @@ function Header() {
             <a href="#">Portfolio</a>
             <a href="#">Contact</a>
         </Menu>
-        <CustomMenu onClick={(()=>setBurgerStatus(true))}/>
+        <MenuWrapper>
+            <CustomMenu onClick={(()=>setBurgerStatus(true))}/>
+        </MenuWrapper>
         <BurgerNav show={burgerStatus}>
             <CloseWrapper>
                 <CustomClose onClick={(()=>setBurgerStatus(false))}/>
             </CloseWrapper>
-            <img src="img/n.jpg"/>
-            <p>I am a 28 years old Full-stack web developer.</p>
-            <PhoneNum>
-                <Phone/>
-                +251 926 412 563
-            </PhoneNum>
-            <Email>
-                <Em/>
-                nattymesele@gmail.com
-            </Email>
-            <Location>
-                <Loc/>
-                Hawassa , Ethiopia
-            </Location>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Service</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Contact</a>
         </BurgerNav>
     </Container>
   )
@@ -86,6 +79,12 @@ const Container = styled.div`
         }
     }
 `
+
+const MenuWrapper = styled.div`
+    @media (min-width: 768px) {
+        display: none;
+    }
+`
 const Menu = styled.div`
     display: flex;
     flex: 1;
@@ -101,43 +100,33 @@ const Menu = styled.div`
 const CustomMenu = styled(MenuIcon)`
     cursor: pointer;
     color: white;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
 `
 const BurgerNav = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background: white;
     width: 50%;
-    height: 100vh;
-    padding-top: 1em; 
-    text-align: center;
-    transform: ${props => props.show ? 'translateX(0%)':'translateX(100%)'};
-    transition: transform .5s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1.5em 1.5em;
+    transform: ${props => props.show ? 'translateX(0)':'translateX(100%)'};
+    transition: transform .6s;
 
-    img {
-        width: 15em;
-        height: 20em;
-        object-fit: cover;
-        border-radius: 50%;
-    }
-
-    p {
-        margin-top: 2em;
-        padding: 0 2em;
-        text-align: left;
-        line-height: 1.5em;
-        color: gray;
-    }
-
-    @media (min-width: 920px){
-        width: 25%;
-    }
-
-    li a {
-        color: black;
+     a {
+        text-decoration: none;
+        font-weight: bold;
         display: block;
-        padding: 1em 1.5em;
-    }
+        padding: 1em 0;
+        border-bottom: 1px solid gray;
+        color: black;
+      }
 `
 const CustomClose = styled(CloseIcon)`
     cursor: pointer;
@@ -146,31 +135,4 @@ const CustomClose = styled(CloseIcon)`
 const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
-`
-const PhoneNum = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 1.5em;
-    padding: 1em 2em;
-    color: gray;
-`
-const Phone = styled(PhoneIcon)`
-`
-const Email = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 1.5em;
-    padding: 1em 2em;
-    color: gray;
-`
-const Em = styled(EmailIcon)`
-`
-const Location = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 1.5em;
-    padding: 1em 2em;
-    color: gray;
-`
-const Loc = styled(LocationOnIcon)`
 `

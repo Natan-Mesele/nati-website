@@ -81,4 +81,9 @@ const Container = styled.div`
       color: white;
     }
   }
+
+  @media (min-width: 768px) {
+    width: 500px;
+    margin: 4rem auto;
+  }
 `
