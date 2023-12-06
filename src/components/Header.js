@@ -18,7 +18,7 @@ function Header() {
   return (
     <Container>
         <a>
-            <a href="#">Natty<span>Brand</span></a>
+            <img src="img/white-logo.png" />
         </a>
         <Menu>
             <a href="#">Home</a>
@@ -56,7 +56,6 @@ const Container = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    background: #051129;
     z-index: 1;
     
 
@@ -68,11 +67,15 @@ const Container = styled.div`
         padding: 0 8em;
       }
 
+      img {
+        width: 5em;
+        }
+
     a {
         text-decoration: none;
         color: white;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1rem;
 
         span {
             color: #279EFF;
@@ -81,13 +84,12 @@ const Container = styled.div`
 `
 
 const MenuWrapper = styled.div`
-    @media (min-width: 768px) {
+    @media (min-width: 768px){
         display: none;
     }
 `
 const Menu = styled.div`
     display: flex;
-    flex: 1;
     justify-content: center;
 
     a {
