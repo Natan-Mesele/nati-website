@@ -1,105 +1,31 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
 import Fade from 'react-reveal/Fade';
 
 function About() {
   return (
-    <Container>
-        <ImgHero img src="img/na.png"/>
-        <Hero>
+    <div id="about" className="text-left m-4 p-6 border-3 border-gray-200 border-opacity-10 shadow-xl flex flex-col items-center justify-center md:m-12 md:p-8 lg:flex-row lg:gap-12 lg:m-16 lg:justify-between">
+        <img src="img/na.png" className="mt-8 w-40 h-52 rounded-full border-3 border-gray-200 border-opacity-10 shadow-xl" alt="Natan Mesele" />
+        <div className="mt-8 md:mt-12 lg:mt-0">
           <Fade bottom>
-            <h1>About</h1>
-            <h2>FULL-STACK DEVELOPER & SOFTWARE DEVELOPER.</h2>
-            <p>Hello! I'm <span>Natan Mesele</span>, a Full-Stack web developer. I have a big interest in computer science.
-                My dream is to be a computer scientist and a university professor (on computer science). I have attended full-stack development courses at Udemy and Evangadi Bootcamps. To further strengthen my future web development studies, I joined Coursera Inc. which is a U.S.-based massive open online course provider. I am a hardworking, honest, and willing to learn new skills.</p>
-            <p>I'm happy to connect, listen and help. Let's work together and build something awesome. Let's turn your idea to an even greater product.</p>
+            <h1 className="text-3xl font-bold mb-2">About</h1>
+            <h2 className="text-2xl mb-2 leading-tight">FULL-STACK DEVELOPER & SOFTWARE DEVELOPER.</h2>
+            <p className="text-gray-600 text-base leading-relaxed mb-4 tracking-wide">
+              Hello! I'm <span className="text-blue-500 font-bold">Natan Mesele</span>, a Full-Stack web developer. I have a big interest in computer science.
+              My dream is to be a computer scientist and a university professor (on computer science). I have attended full-stack development courses at Udemy and Evangadi Bootcamps. To further strengthen my future web development studies, I joined Coursera Inc. which is a U.S.-based massive open online course provider. I am a hardworking, honest, and willing to learn new skills.
+            </p>
+            <p className="text-gray-600 text-base leading-relaxed mb-4 tracking-wide">
+              I'm happy to connect, listen and help. Let's work together and build something awesome. Let's turn your idea into an even greater product.
+            </p>
           </Fade>
           <Fade bottom>
-            <CV>
-              <a target="_blank" href="cv.pdf" class="primary-about">View Resume</a>
-              <a target="_blank" href="cv.pdf" class="primary-about">View certificates</a>
-            </CV>
+            <div className="flex justify-center mt-4">
+              <a href="cv.pdf" target="_blank" className="bg-blue-500 text-white font-bold text-base py-2 px-4 rounded-full mr-4 hover:bg-blue-600 transition">View Resume</a>
+              <a href="cv.pdf" target="_blank" className="bg-blue-500 text-white font-bold text-base py-2 px-4 rounded-full hover:bg-blue-600 transition">View Certificates</a>
+            </div>
           </Fade>
-        </Hero>
-    </Container>
-  )
+        </div>
+    </div>
+  );
 }
 
-export default About
-
-const Container = styled.div`
-  text-align: left;
-  margin: 1em;
-  padding: 1.5em;
-  border: 3px solid rgba(249, 249, 249, 0.1);
-  box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: 768px){
-    margin: 3em 6em;
-    
-  }
-
-  @media (min-width: 920px){
-    margin: 4em 8em;
-    display: flex;
-    gap: 3em;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-`
-const Hero = styled.div`
-  margin-top: 4em;
-  
-  h1 {
-    margin-bottom: .5em;
-  }
-
-  h2 {
-    margin-bottom: .5em;
-    line-height: 1.5em;
-  }
-
-  p {
-    text-align: justify;
-    line-height: 1.3em;
-    margin-bottom: 1em;
-    color: gray;
-    letter-spacing: .1em;
-
-    span {
-      color: #279EFF;
-      font-weight: bold;
-
-    }
-  }
-`
-const CV = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  a {
-    margin-right: 1em;
-    text-decoration: none;
-    background: #279EFF;
-    color: white;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: .6em 1.2em;
-    border-radius: 5em;
-    
-  }
-  
-`
-const ImgHero = styled.img`
-    margin-top: 2em;
-    width: 15em;
-    height: 20em;
-    border-radius: 50%;
-    border: 3px solid rgba(249, 249, 249, 0.1);
-    box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
-`
+export default About;

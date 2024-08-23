@@ -1,115 +1,38 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
 import Fade from 'react-reveal/Fade';
-import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import { useTypewriter, Cursor } from 'react-simple-typewriter';
 
 function Home() {
     const [text] = useTypewriter({
-        words: ['Front-End Developer!', 'Web Developer', 'UI/UX Design'],
+        words: ['Front-End Developer!', 'Web Developer', 'UI/UX Design', 'Software Engineer'],
         loop: {},
-      })
-  return (
-    <Container>
-        <ItemText>
-            <Fade bottom>
-                <p>WELCOME TO MY WORLD</p>
-                <h1>Hi, I’m <span>Natan Mesele</span></h1>
-            </Fade>
-            <Fade bottom>
-                <Btn>
-                    <span>{text}</span>
-                    <Cursor cursorColor='white' /> 
-                </Btn>
-                <a href="#">Go To Portfolio</a>
-            </Fade>
-        </ItemText>
-    </Container>
-  )
+    });
+
+    return (
+        <div id="home" className="relative w-full h-screen bg-cover bg-center bg-opacity-80" style={{ backgroundImage: 'url("img/hacker.jpg")' }}>
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-6 py-8 md:px-12 md:py-16 lg:px-20 lg:py-24">
+                <Fade bottom>
+                    <p className="text-lg font-bold tracking-wider mb-4 md:text-xl lg:text-2xl">
+                        WELCOME TO MY WORLD
+                    </p>
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl mb-6 md:mb-8 lg:mb-10">
+                        Hi, I’m <span className="text-blue-400">Natan Mesele</span>
+                    </h1>
+                </Fade>
+                <Fade bottom>
+                    <div className="relative mt-4 md:mt-6 lg:mt-8">
+                        <div className="text-2xl md:text-3xl lg:text-4xl flex items-center justify-center">
+                            <span>{text}</span>
+                            <Cursor cursorColor="white" />
+                        </div>
+                        <a href="#" className="mt-4 inline-block bg-black text-white text-base md:text-lg lg:text-xl font-bold py-2 px-4 md:py-3 md:px-6 lg:py-4 lg:px-8 border-2 border-white rounded-full hover:bg-blue-400 hover:border-black transition">
+                            Go To Portfolio
+                        </a>
+                    </div>
+                </Fade>
+            </div>
+        </div>
+    );
 }
 
-export default Home
-
-const Container = styled.div`
-    background: url("img/hacker.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    opacity: .8;
-
-    @media (min-width: 768px) {
-        padding: 4em 5em;
-    }
-
-    @media (min-width: 768px){
-        padding: 3em 6em;
-      }
-    
-    @media (min-width: 920px){
-    padding: 4em 8em;
-    }
-`
-const ItemText = styled.div`
-    padding-top: 25vh;
-    text-align: center;
-    color: white;
-
-    p {
-        font-weight: bold;
-        letter-spacing: .2em;
-        margin-bottom: 1em;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 2em;
-
-        span {
-            color: #278EFF;
-         }
-    }
-
-    h2 {
-        margin-bottom: 3em;
-        display: block;
-    }
-
-    a {
-        background: black;
-        color: white;
-        text-decoration: none;
-        font-size: 1.4rem;
-        font-weight: bold;
-        padding: .8em 1.2em;
-        border: 2px solid white;
-        border-radius: 5em;
-        margin-top: 1.5em;
-        display: inline-block;
-
-        &:hover {
-            background: #279EFF;
-            border: 2px solid black;
-        }
-    }
-
-    @media (min-width: 920px) {
-        margin-top: 3em;
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1.5em;
-        }
-
-        p {
-            margin-bottom: 2em;
-        }
-    }
-`
-const Btn = styled.div`
-    margin-top: -3em;
-
-    span {
-        align-items: center;
-        font-size: 3.5em;
-    }
-`
+export default Home;

@@ -1,111 +1,63 @@
-import React from 'react'
-import styled from "styled-components"
+import React from 'react';
 import Fade from 'react-reveal/Fade';
+import ScrollToTop from 'react-scroll-to-top';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
-import ScrollToTop from "react-scroll-to-top";
 
 function Footer() {
   return (
-    <Container>
-        <MainFooter>
-            <Fade bottom>
-            <h1>Address</h1>
-            <p>Addis Ketema Subcity, Hawassa Ethiopia</p>
-            <p>huluale12@gmail.com / nattymesele@gmail.com</p>
-            <p>+251926412563</p>
-            </Fade>
-        </MainFooter>
-        <NavFooter>
-            <Fade bottom>
-                <h1>Navigation</h1>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </Fade> 
-        </NavFooter>
-        <SocialFooter>
-            <Fade bottom>
-                <h1>Social Media</h1>
-                <a target="_blank" href="https://www.facebook.com/natan.mesele.1/"><img src="img/face.png"/></a>
-                <img src="img/git.png"/>
-                <img src="img/inst.png"/>
-                <img src="img/linkedin.png"/>
-                <img src="img/twitter1.png"/>
-            </Fade>
-        </SocialFooter>
-        <Scroll>
-            <ScrollToTop smooth top="20"/>
-        </Scroll> 
-    </Container>
-  )
+    <div className="bg-[#051129] text-white w-full py-6 px-4 md:px-8 lg:px-12">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        {/* Main Footer */}
+        <div className="text-left">
+          <Fade bottom>
+            <h1 className="text-xl font-semibold mb-4">Address</h1>
+            <p className="text-gray-400 mb-2">Addis Ketema Subcity, Hawassa Ethiopia</p>
+            <p className="text-gray-400 mb-2">huluale12@gmail.com / nattymesele@gmail.com</p>
+            <p className="text-gray-400">+251926412563</p>
+          </Fade>
+        </div>
+
+        {/* Navigation Footer */}
+        <div className="text-left">
+          <Fade bottom>
+            <h1 className="text-xl font-semibold mb-4">Navigation</h1>
+            <a href="#" className="block text-gray-400 mb-2 text-lg hover:text-white">Home</a>
+            <a href="#" className="block text-gray-400 mb-2 text-lg hover:text-white">About</a>
+            <a href="#" className="block text-gray-400 mb-2 text-lg hover:text-white">Contact</a>
+          </Fade>
+        </div>
+
+        {/* Social Media Footer */}
+        <div className="text-left">
+          <Fade bottom>
+            <h1 className="text-xl font-semibold mb-4">Social Media</h1>
+            <div className="flex space-x-4">
+              <a href="https://www.facebook.com/natan.mesele.1/" target="_blank" rel="noopener noreferrer">
+                <img src="img/face.png" alt="Facebook" className="w-8 h-8 object-cover bg-white rounded-full border border-gray-300" />
+              </a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                <img src="img/git.png" alt="GitHub" className="w-8 h-8 object-cover bg-white rounded-full border border-gray-300" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <img src="img/inst.png" alt="Instagram" className="w-8 h-8 object-cover bg-white rounded-full border border-gray-300" />
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <img src="img/linkedin.png" alt="LinkedIn" className="w-8 h-8 object-cover bg-white rounded-full border border-gray-300" />
+              </a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                <img src="img/twitter1.png" alt="Twitter" className="w-8 h-8 object-cover bg-white rounded-full border border-gray-300" />
+              </a>
+            </div>
+          </Fade>
+        </div>
+      </div>
+
+      {/* Scroll to Top Button */}
+      <div className="fixed bottom-4 right-4">
+        <ScrollToTop smooth top="20" component={<ArrowUpwardIcon />} />
+      </div>
+    </div>
+  );
 }
 
-export default Footer
-
-const Container = styled.div`
-    background: #051129;
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-    padding: 3em;
-    text-align: left;
-    color: white;
-
-    @media (min-width: 920px){
-        height: 50vh;
-    }
-
-    h1 {
-        font-size: 1.2em;
-        margin: 1em 0;
-    }
-
-    p {
-        color: gray;
-        font-size: .9em;
-        margin-top: 1em;
-    }
-
-    @media (min-width: 768px){
-        padding: 3em 6em;    
-    }
-`
-const MainFooter = styled.div`
-    
-`
-const NavFooter = styled.div`
-    display: flex;
-    flex-direction: column;
-
-    @media (min-width: 818px){
-        margin-left: 6em;
-    }
-
-    a {
-        margin: .5em 0;
-        color: gray;
-        text-decoration: none;
-        font-size: 1em;
-    }
-`
-const SocialFooter = styled.div`
-    color: white;
-
-    img {
-        width: 30px;
-        height: 30px;
-        object-fit: cover;
-        background: white;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 1em;
-        border: .5px solid gray;
-    }
-`
-const Scroll = styled(ScrollToTop)`
-    &:hover {
-        background: white;
-        border: 2px solid gray;
-    }
-`
+export default Footer;
