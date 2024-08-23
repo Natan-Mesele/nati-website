@@ -54,7 +54,11 @@ function Footer() {
 
       {/* Scroll to Top Button */}
       <div className="fixed bottom-4 right-4">
-        <ScrollToTop smooth top="20" component={<ArrowUpwardIcon />} />
+        <ScrollToTop 
+          smooth 
+          top="20" 
+          component={<ArrowUpwardIcon style={{ fontSize: 40, color: 'black' }} />} 
+        />
       </div>
     </div>
   );
