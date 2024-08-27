@@ -9,7 +9,7 @@ function About() {
     >
       <img
         src="img/na.png"
-        className="mt-8 w-40 h-52 rounded-full border-3 border-gray-200 border-opacity-10 shadow-xl"
+        className="mt-8 w-40 h-52 rounded-full border-3 border-gray-200 border-opacity-10 shadow-xl weaving"
         alt="Natan Mesele"
       />
       <div className="mt-8 md:mt-12 lg:mt-0">

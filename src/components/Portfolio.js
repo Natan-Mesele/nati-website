@@ -49,43 +49,30 @@ function Portfolio() {
   );
 }
 
-// Example projects array
 const projects = [
   {
-    githubUrl: 'https://github.com/Natan-Mesele/Tesla-clone',
-    liveDemoUrl: '#', // Add live demo URLs here if available
-    imageUrl: 'img/tesla.jpg',
+    githubUrl: 'https://github.com/Natan-Mesele/PMJ',
+    liveDemoUrl: '#', 
+    imageUrl: 'https://miro.medium.com/v2/resize:fit:1000/1*8G1vA7egoxrL4Bb7RAgnPQ.jpeg',
     altText: 'Tesla Clone',
   },
   {
-    githubUrl: 'https://github.com/Natan-Mesele/apple-clone',
-    liveDemoUrl: '#', // Add live demo URLs here if available
-    imageUrl: 'img/apple.png',
+    githubUrl: 'https://github.com/Natan-Mesele/fd',
+    liveDemoUrl: '#', 
+    imageUrl: 'https://d3l9a8mvoa6cl8.cloudfront.net/wp-content/uploads/sites/3/2020/04/03173944/online-food-delivery-industry-min.jpg',
     altText: 'Apple Clone',
   },
   {
-    githubUrl: 'https://github.com/Natan-Mesele/amazon-clone',
-    liveDemoUrl: '#', // Add live demo URLs here if available
-    imageUrl: 'img/amazon.jpg',
+    githubUrl: 'https://github.com/Natan-Mesele/blog-master',
+    liveDemoUrl: '#', 
+    imageUrl: 'https://images.ctfassets.net/nnyjccrtyeph/2rJhFCc49b2EidjW8v1kqb/12008c3ec9695c960cbea685366a081e/5_Smart_Ways_to_Manage_Content_for_Multiple_Websites.png?w=1250&h=1250&q=50&fm=png',
     altText: 'Amazon Clone',
   },
   {
-    githubUrl: 'https://github.com/Natan-Mesele/netflix-clone',
-    liveDemoUrl: '#', // Add live demo URLs here if available
-    imageUrl: 'img/netflix.jpg',
+    githubUrl: 'https://github.com/Natan-Mesele',
+    liveDemoUrl: '#', 
+    imageUrl: 'https://media.istockphoto.com/id/1094753332/vector/church-christian-icon.jpg?s=612x612&w=0&k=20&c=zjmHenhRdVWyxbStbK9nX6cf4-giUWWYySvZxL4Iikg=',
     altText: 'Netflix Clone',
-  },
-  {
-    githubUrl: 'https://github.com/Natan-Mesele/disney-clone',
-    liveDemoUrl: '#', // Add live demo URLs here if available
-    imageUrl: 'img/disney.jpg',
-    altText: 'Disney Clone',
-  },
-  {
-    githubUrl: 'https://github.com/Natan-Mesele/linkedin-clone',
-    liveDemoUrl: '#', // Add live demo URLs here if available
-    imageUrl: 'img/linkp.jpg',
-    altText: 'LinkedIn Clone',
   },
 ];
 
