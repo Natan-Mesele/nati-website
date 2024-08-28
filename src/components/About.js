@@ -10,7 +10,7 @@ function About() {
       <img
         src="img/na.png"
         className="mt-8 w-40 h-52 rounded-full border-3 border-gray-200 border-opacity-10 shadow-xl weaving"
-        alt="Natan Mesele"
+        alt="Profile picture of Natan Mesele"
       />
       <div className="mt-8 md:mt-12 lg:mt-0">
         <Fade bottom>
@@ -39,15 +39,17 @@ function About() {
         <Fade bottom>
           <div className="flex justify-center mt-4">
             <a
-              href="cv.pdf"
+              href="resume.pdf"
               target="_blank"
+              aria-label="View Resume"
               className="bg-blue-500 text-white font-bold text-base py-2 px-4 rounded-full mr-4 hover:bg-blue-600 transition"
             >
               View Resume
             </a>
             <a
-              href="cv.pdf"
+              href="javaProgramming.pdf"
               target="_blank"
+              aria-label="View Certificates"
               className="bg-blue-500 text-white font-bold text-base py-2 px-4 rounded-full hover:bg-blue-600 transition"
             >
               View Certificates
