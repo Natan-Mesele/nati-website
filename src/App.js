@@ -1,26 +1,29 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Header from './components/Header';
-import About from './components/About';
-import Service from './components/Service';
-import Skill from './components/Skill';
-import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PortfolioHeader from './components/PortfolioHeader';
 
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <Home/>
-      <About/>
-      <Service/>
-      <Skill/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
-    </div>
+    <Router>
+      <div className="App">
+        {/* Header and Footer are always present */}
+        <Header />
+
+        <Routes>
+          {/* Define routes for different pages */}
+          <Route path="/home" element={<Home />} />
+          <Route path="/portfolio" element={<PortfolioHeader />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

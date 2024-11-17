@@ -1,14 +1,39 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
-function Portfolio() {
+const PortfolioCards = () => {
+  const projects = [
+    {
+      githubUrl: 'https://github.com/Natan-Mesele/PMJ',
+      liveDemoUrl: '#',
+      imageUrl: 'https://miro.medium.com/v2/resize:fit:1000/1*8G1vA7egoxrL4Bb7RAgnPQ.jpeg',
+      altText: 'Tesla Clone',
+    },
+    {
+      githubUrl: 'https://github.com/Natan-Mesele/fd',
+      liveDemoUrl: '#',
+      imageUrl: 'https://d3l9a8mvoa6cl8.cloudfront.net/wp-content/uploads/sites/3/2020/04/03173944/online-food-delivery-industry-min.jpg',
+      altText: 'Apple Clone',
+    },
+    {
+      githubUrl: 'https://github.com/Natan-Mesele/blog-master',
+      liveDemoUrl: '#',
+      imageUrl: 'https://images.ctfassets.net/nnyjccrtyeph/2rJhFCc49b2EidjW8v1kqb/12008c3ec9695c960cbea685366a081e/5_Smart_Ways_to_Manage_Content_for_Multiple_Websites.png?w=1250&h=1250&q=50&fm=png',
+      altText: 'Amazon Clone',
+    },
+    {
+      githubUrl: 'https://github.com/Natan-Mesele',
+      liveDemoUrl: '#',
+      imageUrl: 'https://media.istockphoto.com/id/1094753332/vector/church-christian-icon.jpg?s=612x612&w=0&k=20&c=zjmHenhRdVWyxbStbK9nX6cf4-giUWWYySvZxL4Iikg=',
+      altText: 'Netflix Clone',
+    },
+  ];
+
   return (
-    <div id="portfolio" className="pt-8 md:pt-12 pb-8 md:pb-12 bg-gray-100">
-      <Fade bottom>
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8">Recent Works</h1>
-      </Fade>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-8">
-        {projects.map((project, index) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 md:px-8 mt-8">
+      {/* Check if projects is an array and has items */}
+      {Array.isArray(projects) && projects.length > 0 ? (
+        projects.map((project, index) => (
           <Fade bottom key={index}>
             <a
               target="_blank"
@@ -43,37 +68,12 @@ function Portfolio() {
               </div>
             </a>
           </Fade>
-        ))}
-      </div>
+        ))
+      ) : (
+        <p>No projects available</p> // Fallback message in case projects is empty or not an array
+      )}
     </div>
   );
-}
+};
 
-const projects = [
-  {
-    githubUrl: 'https://github.com/Natan-Mesele/PMJ',
-    liveDemoUrl: '#', 
-    imageUrl: 'https://miro.medium.com/v2/resize:fit:1000/1*8G1vA7egoxrL4Bb7RAgnPQ.jpeg',
-    altText: 'Tesla Clone',
-  },
-  {
-    githubUrl: 'https://github.com/Natan-Mesele/fd',
-    liveDemoUrl: '#', 
-    imageUrl: 'https://d3l9a8mvoa6cl8.cloudfront.net/wp-content/uploads/sites/3/2020/04/03173944/online-food-delivery-industry-min.jpg',
-    altText: 'Apple Clone',
-  },
-  {
-    githubUrl: 'https://github.com/Natan-Mesele/blog-master',
-    liveDemoUrl: '#', 
-    imageUrl: 'https://images.ctfassets.net/nnyjccrtyeph/2rJhFCc49b2EidjW8v1kqb/12008c3ec9695c960cbea685366a081e/5_Smart_Ways_to_Manage_Content_for_Multiple_Websites.png?w=1250&h=1250&q=50&fm=png',
-    altText: 'Amazon Clone',
-  },
-  {
-    githubUrl: 'https://github.com/Natan-Mesele',
-    liveDemoUrl: '#', 
-    imageUrl: 'https://media.istockphoto.com/id/1094753332/vector/church-christian-icon.jpg?s=612x612&w=0&k=20&c=zjmHenhRdVWyxbStbK9nX6cf4-giUWWYySvZxL4Iikg=',
-    altText: 'Netflix Clone',
-  },
-];
-
-export default Portfolio;
+export default PortfolioCards;

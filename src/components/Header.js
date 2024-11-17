@@ -1,20 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
-import { animateScroll as scroll, scroller } from 'react-scroll';
+import { scroller } from 'react-scroll';
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [burgerStatus, setBurgerStatus] = useState(false);
-    const [scrolling, setScrolling] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolling(window.scrollY > 50);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     const scrollToSection = (sectionId) => {
         scroller.scrollTo(sectionId, {
@@ -25,29 +17,50 @@ function Header() {
     };
 
     return (
-        <header className={`fixed top-0 left-0 right-0 z-10 flex items-center justify-between p-4 transition-colors ${scrolling ? 'bg-black' : 'bg-transparent'}`}>
-            <a href="#">
-                <img src="img/white-logo.png" className="w-20" alt="Logo" />
-            </a>
-            <nav className="hidden md:flex">
-                <a href="#home" className="px-4 text-white font-bold">Home</a>
-                <a href="#about" className="px-4 text-white font-bold">About</a>
-                <a href="#service" className="px-4 text-white font-bold">Service</a>
-                <a href="#portfolio" className="px-4 text-white font-bold">Portfolio</a>
-                <a href="#contact" className="px-4 text-white font-bold">Contact</a>
+        <header className="fixed top-0 left-0 right-0 z-10 flex items-center justify-between p-4 lg:px-16 bg-gray-800">
+            {/* Logo */}
+            <Link to="/" className="mr-18">
+                <img src="img/loo.png" className="w-20" alt="Logo" />
+            </Link>
+
+            {/* Desktop Navigation Links */}
+            <nav>
+                <ul className="hidden md:flex space-x-6">
+                    <li><Link to="/home" className="text-white font-bold hover:text-gray-300 transition-colors">Home</Link></li>
+                    <li><Link to="/portfolio" className="text-white font-bold hover:text-gray-300 transition-colors">Portfolio</Link></li>
+                    <li><Link to="/contact" className="text-white font-bold hover:text-gray-300 transition-colors">Contact</Link></li>
+                </ul>
             </nav>
+
+            {/* Desktop Social Media Links */}
+            <div className="hidden md:flex space-x-4 px-4 ml-4 mr-4">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+                    <FaGithub className="w-6 h-6 mx-2" />
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+                    <FaLinkedin className="w-6 h-6 mx-2" />
+                </a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+                    <FaFacebook className="w-6 h-6 mx-2" />
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+                    <FaInstagram className="w-6 h-6 mx-2" />
+                </a>
+            </div>
+
+            {/* Burger Icon for Mobile */}
             <div className="md:hidden">
                 <MenuIcon className="text-white cursor-pointer" onClick={() => setBurgerStatus(true)} />
             </div>
-            <div className={`fixed top-0 right-0 bg-white w-1/2 h-full flex flex-col text-left p-6 transition-transform transform ${burgerStatus ? 'translate-x-0' : 'translate-x-full'}`}>
-                <div className="flex justify-end">
-                    <CloseIcon className="text-black cursor-pointer" onClick={() => setBurgerStatus(false)} />
+
+            {/* Burger Menu */}
+            <div className={`fixed top-0 right-0 bg-gray-800 w-2/3 h-full flex flex-col text-left p-6 transition-transform transform ${burgerStatus ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className="flex justify-end mb-6">
+                    <CloseIcon className="text-white cursor-pointer" onClick={() => setBurgerStatus(false)} />
                 </div>
-                <a href="#home" className="text-black font-bold py-4 border-b border-gray-300" onClick={() => scrollToSection('home')}>Home</a>
-                <a href="#about" className="text-black font-bold py-4 border-b border-gray-300" onClick={() => scrollToSection('about')}>About</a>
-                <a href="#service" className="text-black font-bold py-4 border-b border-gray-300" onClick={() => scrollToSection('service')}>Service</a>
-                <a href="#portfolio" className="text-black font-bold py-4 border-b border-gray-300" onClick={() => scrollToSection('portfolio')}>Portfolio</a>
-                <a href="#contact" className="text-black font-bold py-4 border-b border-gray-300" onClick={() => scrollToSection('contact')}>Contact</a>
+                <Link to="/" className="text-white font-bold py-4 border-b border-gray-700 text-lg mx-2" onClick={() => setBurgerStatus(false)}>Home</Link>
+                <Link to="/portfolio" className="text-white font-bold py-4 border-b border-gray-700 text-lg mx-2" onClick={() => setBurgerStatus(false)}>Portfolio</Link>
+                <Link to="/contact" className="text-white font-bold py-4 border-b border-gray-700 text-lg mx-2" onClick={() => setBurgerStatus(false)}>Contact</Link>
             </div>
         </header>
     );
