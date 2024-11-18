@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div className="bg-[#FAFAFA] text-[#888888] w-full py-8 px-16 md:px-24 lg:px-32 font-sans fixed bottom-0 left-0">
+    <div className="bg-[#FAFAFA] text-[#888888] w-full py-8 px-16 md:px-24 lg:px-32 font-sans">
       <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         {/* Copyright Section */}
         <p className="text-center text-sm md:text-base font-medium">

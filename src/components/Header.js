@@ -54,13 +54,13 @@ function Header() {
             </div>
 
             {/* Burger Menu */}
-            <div className={`fixed top-0 right-0 bg-gray-800 w-2/3 h-full flex flex-col text-left p-6 transition-transform transform ${burgerStatus ? 'translate-x-0' : 'translate-x-full'}`}>
+            <div className={`fixed top-0 right-0 bg-gray-800 w-3/4 h-full flex flex-col text-left p-6 transition-transform transform ${burgerStatus ? 'translate-x-0' : 'translate-x-full'}`}>
                 <div className="flex justify-end mb-6">
                     <CloseIcon className="text-white cursor-pointer" onClick={() => setBurgerStatus(false)} />
                 </div>
-                <Link to="/" className="text-white font-bold py-4 border-b border-gray-700 text-lg mx-2" onClick={() => setBurgerStatus(false)}>Home</Link>
-                <Link to="/portfolio" className="text-white font-bold py-4 border-b border-gray-700 text-lg mx-2" onClick={() => setBurgerStatus(false)}>Portfolio</Link>
-                <Link to="/contact" className="text-white font-bold py-4 border-b border-gray-700 text-lg mx-2" onClick={() => setBurgerStatus(false)}>Contact</Link>
+                <Link to="/" className="text-white font-bold py-4 border-b border-gray-700 text-4xl mx-2" onClick={() => setBurgerStatus(false)}>Home</Link>
+                <Link to="/portfolio" className="text-white font-bold py-4 border-b border-gray-700 text-4xl mx-2" onClick={() => setBurgerStatus(false)}>Portfolio</Link>
+                <Link to="/contact" className="text-white font-bold py-4 border-b border-gray-700 text-4xl mx-2" onClick={() => setBurgerStatus(false)}>Contact</Link>
             </div>
         </header>
     );
