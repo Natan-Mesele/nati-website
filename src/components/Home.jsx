@@ -10,9 +10,9 @@ function Home() {
         {/* Left Section: About */}
         <div className="flex flex-col justify-center w-full md:w-1/2 p-8 md:p-16 text-left pt-32 md:pt-0">
           <Fade bottom>
-            <p className="text-3xl md:text-4xl lg:text-8xl font-bold text-left mb-6 md:mb-8 font-sans">
+            {/* <p className="text-3xl md:text-4xl lg:text-8xl font-bold text-left mb-6 md:mb-8 font-sans">
               .about
-            </p>
+            </p> */}
           </Fade>
 
           <Fade bottom>
