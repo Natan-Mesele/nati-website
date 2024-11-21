@@ -25,26 +25,26 @@ function Header() {
 
             {/* Desktop Navigation Links */}
             <nav>
-                <ul className="hidden md:flex space-x-6">
-                    <li><Link to="/home" className="text-white font-bold hover:text-gray-300 transition-colors">Home</Link></li>
-                    <li><Link to="/portfolio" className="text-white font-bold hover:text-gray-300 transition-colors">Portfolio</Link></li>
-                    <li><Link to="/contact" className="text-white font-bold hover:text-gray-300 transition-colors">Contact</Link></li>
+                <ul className="hidden md:flex space-x-12">
+                    <li><Link to="/" className="text-white font-normal hover:text-gray-300 transition-colors text-lg">home</Link></li>
+                    <li><Link to="/portfolio" className="text-white font-normal hover:text-gray-300 transition-colors text-lg">portfolio</Link></li>
+                    <li><Link to="/contact" className="text-white font-normal hover:text-gray-300 transition-colors text-lg">contact</Link></li>
                 </ul>
             </nav>
 
             {/* Desktop Social Media Links */}
             <div className="hidden md:flex space-x-4 px-4 ml-4 mr-4">
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                    <FaGithub className="w-6 h-6 mx-2" />
+                    <FaGithub className="w-8 h-8 mx-2" />
                 </a>
                 <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                    <FaLinkedin className="w-6 h-6 mx-2" />
+                    <FaLinkedin className="w-8 h-8 mx-2" />
                 </a>
                 <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                    <FaFacebook className="w-6 h-6 mx-2" />
+                    <FaFacebook className="w-8 h-8 mx-2" />
                 </a>
                 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                    <FaInstagram className="w-6 h-6 mx-2" />
+                    <FaInstagram className="w-8 h-8 mx-2" />
                 </a>
             </div>
 

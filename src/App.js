@@ -16,11 +16,10 @@ function App() {
 
         <Routes>
           {/* Define routes for different pages */}
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<PortfolioHeader />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-
         <Footer />
       </div>
     </Router>

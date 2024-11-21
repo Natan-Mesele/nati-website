@@ -4,12 +4,11 @@ import Fade from 'react-reveal/Fade';
 const PortfolioCards = () => {
   const projects = [
     {
-      title: 'My UI design book',
-      subtitle: 'Book',
-      githubUrl: 'https://github.com/Natan-Mesele/PMJ',
+      title: 'Blog website for Nice Plc',
+      subtitle: 'Blog website',
+      githubUrl: 'https://github.com/Natan-Mesele/blogn',
       liveDemoUrl: '#',
-      imageUrl: 'https://miro.medium.com/v2/resize:fit:1000/1*8G1vA7egoxrL4Bb7RAgnPQ.jpeg',
-      altText: 'UI Design Book',
+      imageUrl: 'https://miro.medium.com/v2/resize:fit:1024/1*yBt65HhmARbqZDDJ1McFDg.png',
     },
     {
       title: 'Creating a lean design system',
@@ -17,7 +16,6 @@ const PortfolioCards = () => {
       githubUrl: 'https://github.com/Natan-Mesele/fd',
       liveDemoUrl: '#',
       imageUrl: 'https://d3l9a8mvoa6cl8.cloudfront.net/wp-content/uploads/sites/3/2020/04/03173944/online-food-delivery-industry-min.jpg',
-      altText: 'Design System',
     },
     {
       title: 'Interior design news feed',
@@ -25,15 +23,6 @@ const PortfolioCards = () => {
       githubUrl: 'https://github.com/Natan-Mesele/blog-master',
       liveDemoUrl: '#',
       imageUrl: 'https://images.ctfassets.net/nnyjccrtyeph/2rJhFCc49b2EidjW8v1kqb/12008c3ec9695c960cbea685366a081e/5_Smart_Ways_to_Manage_Content_for_Multiple_Websites.png?w=1250&h=1250&q=50&fm=png',
-      altText: 'Interior Design',
-    },
-    {
-      title: 'Qantas homepage refresh',
-      subtitle: 'Website design',
-      githubUrl: 'https://github.com/Natan-Mesele',
-      liveDemoUrl: '#',
-      imageUrl: 'https://media.istockphoto.com/id/1094753332/vector/church-christian-icon.jpg?s=612x612&w=0&k=20&c=zjmHenhRdVWyxbStbK9nX6cf4-giUWWYySvZxL4Iikg=',
-      altText: 'Qantas Homepage',
     },
   ];
 
@@ -73,8 +62,8 @@ const PortfolioCards = () => {
               </div>
               {/* Text section */}
               <div className="p-4 text-left">
-                <h3 className="text-lg font-light text-gray-500">{project.title}</h3>
-                <p className="text-sm text-gray-400">{project.subtitle}</p>
+                <h3 className="text-lg font-light text-gray-700 mb-1">{project.title}</h3>
+                <p className="text-md text-gray-400">{project.subtitle}</p>
               </div>
             </div>
           </Fade>

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { FaGithub, FaLinkedin, FaFacebook, FaInstagram } from 'react-icons/fa';
 import Zoom from 'react-reveal/Zoom'; // Importing Zoom for image animation
@@ -7,6 +7,10 @@ import Slide from 'react-reveal/Slide'; // Importing Slide for slide animation
 
 export const Contact = () => {
   const form = useRef();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);  // Scroll to top when the page loads
+  }, []); 
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -39,11 +43,11 @@ export const Contact = () => {
 
             {/* Social Media Icons */}
             <div className="grid grid-cols-2 gap-x-14 gap-y-6 mt-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors">
+              <a href="https://github.com/Natan-Mesele" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors">
                 <FaGithub className="w-14 h-14 mb-2" />
                 <span>Github</span>
               </a>
-              <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors">
+              <a href="https://www.linkedin.com/in/natan-mesele-70b144234/" target="_blank" rel="noopener noreferrer" className="flex flex-row items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors">
                 <FaLinkedin className="w-14 h-14 mb-2" />
                 <span>LinkedIn</span>
               </a>

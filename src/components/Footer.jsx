@@ -12,7 +12,7 @@ function Footer() {
         {/* Navigation Links */}
         <div className="flex space-x-12">
           <a href="#" className="text-sm md:text-base hover:text-black transition-colors duration-300">
-            About
+            Home
           </a>
           <a href="#" className="text-sm md:text-base hover:text-black transition-colors duration-300">
             Portfolio
