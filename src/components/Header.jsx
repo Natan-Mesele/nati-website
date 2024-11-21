@@ -19,31 +19,37 @@ function Header() {
     return (
         <header className="fixed top-0 left-0 right-0 z-10 flex items-center justify-between p-4 lg:px-16 bg-gray-800">
             {/* Logo */}
-            <Link to="/" className="mr-18">
+            <Link to="/" className="mr-18 animate-slide-in-left">
                 <img src="img/loo.png" className="w-20" alt="Logo" />
             </Link>
 
             {/* Desktop Navigation Links */}
             <nav>
                 <ul className="hidden md:flex space-x-12">
-                    <li><Link to="/" className="text-white font-normal hover:text-gray-300 transition-colors text-lg">home</Link></li>
-                    <li><Link to="/portfolio" className="text-white font-normal hover:text-gray-300 transition-colors text-lg">portfolio</Link></li>
-                    <li><Link to="/contact" className="text-white font-normal hover:text-gray-300 transition-colors text-lg">contact</Link></li>
+                    <li className="animate-slide-in-left delay-200">
+                        <Link to="/" className="text-white font-normal hover:text-gray-300 transition-colors text-lg">home</Link>
+                    </li>
+                    <li className="animate-slide-in-left delay-400">
+                        <Link to="/portfolio" className="text-white font-normal hover:text-gray-300 transition-colors text-lg">portfolio</Link>
+                    </li>
+                    <li className="animate-slide-in-left delay-600">
+                        <Link to="/contact" className="text-white font-normal hover:text-gray-300 transition-colors text-lg">contact</Link>
+                    </li>
                 </ul>
             </nav>
 
             {/* Desktop Social Media Links */}
             <div className="hidden md:flex space-x-4 px-4 ml-4 mr-4">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors animate-slide-in-left delay-800">
                     <FaGithub className="w-8 h-8 mx-2" />
                 </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors animate-slide-in-left delay-1000">
                     <FaLinkedin className="w-8 h-8 mx-2" />
                 </a>
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors animate-slide-in-left delay-1200">
                     <FaFacebook className="w-8 h-8 mx-2" />
                 </a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors animate-slide-in-left delay-1400">
                     <FaInstagram className="w-8 h-8 mx-2" />
                 </a>
             </div>
@@ -58,9 +64,9 @@ function Header() {
                 <div className="flex justify-end mb-6">
                     <CloseIcon className="text-white cursor-pointer" onClick={() => setBurgerStatus(false)} />
                 </div>
-                <Link to="/" className="text-white font-bold py-4 border-b border-gray-700 text-4xl mx-2" onClick={() => setBurgerStatus(false)}>Home</Link>
-                <Link to="/portfolio" className="text-white font-bold py-4 border-b border-gray-700 text-4xl mx-2" onClick={() => setBurgerStatus(false)}>Portfolio</Link>
-                <Link to="/contact" className="text-white font-bold py-4 border-b border-gray-700 text-4xl mx-2" onClick={() => setBurgerStatus(false)}>Contact</Link>
+                <Link to="/" className="text-white font-bold py-4 border-b border-gray-700 text-4xl mx-2 animate-slide-in-left delay-200" onClick={() => setBurgerStatus(false)}>Home</Link>
+                <Link to="/portfolio" className="text-white font-bold py-4 border-b border-gray-700 text-4xl mx-2 animate-slide-in-left delay-400" onClick={() => setBurgerStatus(false)}>Portfolio</Link>
+                <Link to="/contact" className="text-white font-bold py-4 border-b border-gray-700 text-4xl mx-2 animate-slide-in-left delay-600" onClick={() => setBurgerStatus(false)}>Contact</Link>
             </div>
         </header>
     );
